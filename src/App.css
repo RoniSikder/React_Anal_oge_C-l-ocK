@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top right, #009900 0%, #cccc00 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.clock{
+  width: 500px;
+  height: 500px;
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+  background-color: wheat;
+  position: relative;
+}
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.number{
+  position: absolute;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+}
+.number1{
+  transform: rotate(30deg);
+}
+.number2{
+  transform: rotate(60deg);
+}
+.number3{
+  transform: rotate(90deg);
+}
+.number4{
+  transform: rotate(120deg);
+}
+.number5{
+  transform: rotate(150deg);
+}
+.number6{
+  transform: rotate(180deg);
+}
+.number7{
+  transform: rotate(210deg);
+}
+.number8{
+  transform: rotate(240deg);
+}
+.number9{
+  transform: rotate(270deg);
+}
+.number10{
+  transform: rotate(300deg);
+}
+.number11{
+  transform: rotate(330deg);
 }
 
-.App-link {
-  color: #61dafb;
+.hands{
+  position: absolute;
+  bottom: 50%;
+  left: 49%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translate(-50%);
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hand1{
+  height: 45%;
+  width: 10px;
+  background-color: black;
+}
+.hand2{
+  height: 40%;
+  width: 10px;
+  background-color: red;
+}
+.hand3{
+  height: 35%;
+  width: 10px;
+  background-color: #0f0fbd;
 }
